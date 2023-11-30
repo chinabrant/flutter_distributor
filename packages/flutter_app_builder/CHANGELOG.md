@@ -1,8 +1,3 @@
-## 0.3.6
-
-* bump `shell_executor` to 0.1.5
-* fix: windows build failing due to invalid path in Flutter v3.15.0+ #149
-
 ## 0.3.4
 
 * bump `shell_executor` to 0.1.4

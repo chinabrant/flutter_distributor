@@ -1,7 +1,3 @@
-## 0.3.6
-
-* bump `shell_executor` to 0.1.5
-
 ## 0.3.4
 
 * bump `shell_executor` to 0.1.4

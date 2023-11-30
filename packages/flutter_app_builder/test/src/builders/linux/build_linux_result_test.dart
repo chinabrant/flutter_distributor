@@ -10,7 +10,6 @@ void main() {
           arguments: {'profile': true},
         ),
       );
-      r.arch = 'x64';
       expect(r.outputDirectory.path, 'build/linux/x64/profile/bundle');
       r.arch = 'arm64';
       expect(r.outputDirectory.path, 'build/linux/arm64/profile/bundle');
@@ -19,7 +18,6 @@ void main() {
       final r = BuildLinuxResult(
         BuildConfig(),
       );
-      r.arch = 'x64';
       expect(r.outputDirectory.path, 'build/linux/x64/release/bundle');
       r.arch = 'arm64';
       expect(r.outputDirectory.path, 'build/linux/arm64/release/bundle');

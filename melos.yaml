@@ -16,13 +16,6 @@ scripts:
     exec: flutter analyze --fatal-infos
     description: Run `flutter analyze` for all packages.
 
-  test:
-    exec: flutter test
-    description: Run `flutter test` for a specific package.
-    packageFilters:
-      dirExists:
-        - test
-
   format:
     exec: dart format . --fix
     description: Run `dart format` for all packages.

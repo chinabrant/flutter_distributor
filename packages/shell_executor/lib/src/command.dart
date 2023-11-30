@@ -11,23 +11,10 @@ abstract class Command {
     List<String> arguments, {
     Map<String, String>? environment,
   }) {
-    return ShellExecutor.global.exec(
+    return $(
       executable,
       arguments,
       environment: environment,
-    );
-  }
-
-  ProcessResult execSync(
-    List<String> arguments, {
-    Map<String, String>? environment,
-    bool runInShell = false,
-  }) {
-    return ShellExecutor.global.execSync(
-      executable,
-      arguments,
-      environment: environment,
-      runInShell: runInShell,
     );
   }
 }

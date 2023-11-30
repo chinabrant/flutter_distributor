@@ -119,7 +119,7 @@ categories:
 startup_notify: true  
 */
 
-class MakeDebConfig extends MakeLinuxPackageConfig {
+class MakeDebConfig extends MakeConfig {
   MakeDebConfig({
     required this.displayName,
     required this.packageName,
@@ -251,13 +251,13 @@ class MakeDebConfig extends MakeLinuxPackageConfig {
   List<String>? categories;
 
   List<String> get postinstallScripts => [
-        'ln -s /usr/share/$appBinaryName/$appBinaryName /usr/bin/$appBinaryName',
-        'chmod +x /usr/bin/$appBinaryName',
+        'ln -s /usr/share/$appName/$appName /usr/bin/$appName',
+        'chmod +x /usr/bin/$appName',
         ..._postinstallScripts,
       ];
 
   List<String> get postuninstallScripts => [
-        'rm /usr/bin/$appBinaryName',
+        'rm /usr/bin/$appName',
         ..._postuninstallScripts,
       ];
 
@@ -294,8 +294,8 @@ class MakeDebConfig extends MakeLinuxPackageConfig {
         'Version': appVersion.toString(),
         'Name': displayName,
         'GenericName': genericName,
-        'Icon': appBinaryName,
-        'Exec': '$appBinaryName %U',
+        'Icon': appName,
+        'Exec': '$appName %U',
         'Actions': actions != null && actions!.isNotEmpty
             ? '${actions!.join(';')};'
             : null,
